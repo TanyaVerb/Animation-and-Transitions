@@ -1,0 +1,180 @@
+html {
+  font-size: 25px;
+}
+
+.example {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  -webkit-animation: bgChenge 5s infinite, sizeChenge 5s infinite;
+          animation: bgChenge 5s infinite, sizeChenge 5s infinite;
+}
+
+@-webkit-keyframes bgChenge {
+  from {
+    background-color: aqua;
+  }
+  50% {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
+}
+
+@keyframes bgChenge {
+  from {
+    background-color: aqua;
+  }
+  50% {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
+}
+@-webkit-keyframes sizeChenge {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes sizeChenge {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.container {
+  border: 2px solid rgb(0, 38, 255);
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 60px;
+  padding: 0px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  top: 0;
+  position: relative;
+}
+
+.button_1 {
+  color: #fff;
+  background-color: #5e5373;
+  -webkit-box-shadow: 0 5px 0px #3c354a;
+          box-shadow: 0 5px 0px #3c354a;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.button_1:hover {
+  top: 12px;
+  -webkit-box-shadow: 0 3px 0px #3c354a;
+          box-shadow: 0 3px 0px #3c354a;
+  background-color: #08a8b3;
+}
+
+.wrapper {
+  width: 800px;
+  height: 600px;
+  background-color: black;
+}
+
+.content {
+  padding: 50px;
+}
+
+.content__circle {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  -webkit-animation: white-circle 2s linear infinite alternate 0s forwards, red-circle 5s ease-in infinite alternate 0s forwards;
+          animation: white-circle 2s linear infinite alternate 0s forwards, red-circle 5s ease-in infinite alternate 0s forwards;
+}
+
+.content:hover .content__circle {
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
+@-webkit-keyframes white-circle {
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 0%;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+@keyframes white-circle {
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 0%;
+  }
+  100% {
+    left: 500px;
+  }
+}
+@-webkit-keyframes red-circle {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@keyframes red-circle {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: #fff;
+  }
+}/*# sourceMappingURL=main.css.map */

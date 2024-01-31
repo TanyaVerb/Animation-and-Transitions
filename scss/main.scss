@@ -1,0 +1,180 @@
+html {
+  font-size: 25px;
+}
+// p {
+//   animation-duration: 3s;
+//   animation-name: slidein;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+// }
+
+// @keyframes slidein {
+//   from {
+//     margin-left: 100%;
+//     width: 300%;
+//   }
+
+//   75% {
+//     font-size: 300%;
+//     margin-left: 25%;
+//     width: 150%;
+//   }
+
+//   to {
+//     margin-left: 0%;
+//     width: 100%;
+//   }
+// }
+
+.example {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  //   animation-name: myAnimation;
+  //   animation-duration: 5s;
+  //   animation-timing-function: linear;
+  //   animation-iteration-count: 3;
+  //   animation-direction: alternate;
+  animation: bgChenge 5s infinite, sizeChenge 5s infinite;
+}
+
+// @keyframes myAnimation {
+//   from {
+//     background-color: aqua;
+//   }
+
+//   50% {
+//     background-color: red;
+//     transform: scale(1.2);
+//   }
+
+//   to {
+//     background-color: green;
+//   }
+// }
+
+@keyframes bgChenge {
+  from {
+    background-color: aqua;
+  }
+  50% {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
+}
+@keyframes sizeChenge {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.container {
+  border: 2px solid rgb(0, 38, 255);
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 60px;
+  padding: 0px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  top: 0;
+  position: relative;
+}
+
+.button_1 {
+  color: #fff;
+  background-color: #5e5373;
+  box-shadow: 0 5px 0px #3c354a;
+  transition-duration: 1s;
+}
+.button_1:hover {
+  top: 12px;
+  box-shadow: 0 3px 0px #3c354a;
+  background-color: #08a8b3;
+}
+
+// circle
+
+.wrapper {
+  width: 800px;
+  height: 600px;
+  background-color: black;
+}
+.content {
+  padding: 50px;
+}
+.content__circle {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+
+  //   animation-name: white-circle;
+  //   animation-duration: 2s;
+  //   animation-timing-function: linear;
+  //   animation-iteration-count: 3;
+  //   animation-direction: alternate;
+  //   animation-delay: 0s;
+  //   animation-fill-mode: forwards;
+  animation: white-circle 2s linear infinite alternate 0s forwards,
+    red-circle 5s ease-in infinite alternate 0s forwards;
+}
+
+// .content:hover .content__circle {
+//   animation-play-state: paused;
+// }
+// .content__circle:hover {
+//   animation-play-state: paused;
+// }
+
+// Сброс на стартовую позицию
+
+.content:hover .content__circle {
+  animation-name: none;
+}
+
+@keyframes white-circle {
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 0%;
+  }
+
+  100% {
+    left: 500px;
+  }
+}
+@keyframes red-circle {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: #fff;
+  }
+}
