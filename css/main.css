@@ -1,7 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   font-size: 25px;
 }
 
+.practice p {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 .example {
   border: 2px solid black;
   width: 200px;
@@ -176,5 +225,115 @@ html {
   }
   100% {
     background-color: #fff;
+  }
+}
+.solid {
+  width: 100%;
+  height: 250px;
+  background-color: #28b1db;
+  border-bottom: 25px solid #090909;
+  position: absolute;
+  top: -250px;
+  -webkit-transition: top 1s ease-in-out;
+  transition: top 1s ease-in-out;
+  -webkit-animation: render 3s ease-in-out infinite;
+          animation: render 3s ease-in-out infinite;
+}
+.solid:hover {
+  top: 0;
+}
+.solid p {
+  text-align: center;
+  margin: 100px;
+}
+
+@-webkit-keyframes render {
+  0% {
+    background-color: #28b1db;
+  }
+  50% {
+    background-color: #4f5151;
+  }
+  100% {
+    background-color: #28b1db;
+  }
+}
+
+@keyframes render {
+  0% {
+    background-color: #28b1db;
+  }
+  50% {
+    background-color: #4f5151;
+  }
+  100% {
+    background-color: #28b1db;
+  }
+}
+.practice {
+  margin-top: 300px;
+  margin-bottom: 520px;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: #a14b35;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-animation: render2 4s ease-in-out infinite;
+          animation: render2 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes render2 {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: #a14b35;
+  }
+  25% {
+    top: 0;
+    left: 300px;
+    background-color: #4770d0;
+    border-radius: 50%;
+  }
+  50% {
+    top: 500px;
+    left: 300px;
+    background-color: #162d61;
+    border-radius: 0%;
+  }
+  75% {
+    top: 500px;
+    left: 0px;
+    background-color: #268248;
+    border-radius: 50%;
+  }
+}
+
+@keyframes render2 {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: #a14b35;
+  }
+  25% {
+    top: 0;
+    left: 300px;
+    background-color: #4770d0;
+    border-radius: 50%;
+  }
+  50% {
+    top: 500px;
+    left: 300px;
+    background-color: #162d61;
+    border-radius: 0%;
+  }
+  75% {
+    top: 500px;
+    left: 0px;
+    background-color: #268248;
+    border-radius: 50%;
   }
 }/*# sourceMappingURL=main.css.map */
